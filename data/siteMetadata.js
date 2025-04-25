@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
+  title: 'Suvaranjan',
+  author: 'Suvaranjan Pradhan',
   headerTitle: 'TailwindBlog',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
@@ -11,9 +11,9 @@ const siteMetadata = {
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
   mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
+  email: 'suvaranjan01@gmail.com',
+  github: 'https://github.com/suvaranjan',
+  x: 'https://twitter.com/suvaranjan',
   // twitter: 'https://twitter.com/Twitter',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',

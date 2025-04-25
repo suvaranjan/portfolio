@@ -1,13 +1,5 @@
-@reference "./tailwind.css";
+/* @reference "./tailwind.css";
 
-/**
- * CSS Styles for code highlighting.
- * Feel free to customize token styles 
- * by copying from a prismjs compatible theme:
- * https://github.com/PrismJS/prism-themes
- */
-
-/* Code title styles */
 .remark-code-title {
   @apply rounded-xs bg-gray-700 px-5 py-3 font-mono text-sm font-bold text-gray-200 dark:bg-gray-800;
 }
@@ -16,7 +8,6 @@
   @apply mt-0 rounded-t-none;
 }
 
-/* Code block styles */
 .code-highlight {
   @apply float-left min-w-full;
 }
@@ -42,14 +33,6 @@
   content: attr(line);
 }
 
-/* Token styles */
-/**
- * MIT License
- * Copyright (c) 2018 Sarah Drasner
- * Sarah Drasner's[@sdras] Night Owl
- * Ported by Sara vieria [@SaraVieira]
- * Added by Souvik Mandal [@SimpleIndian]
- */
 .token.comment,
 .token.prolog,
 .token.cdata {
@@ -139,4 +122,193 @@
 
 .token.table {
   display: inline;
+} */
+
+@reference "./tailwind.css";
+
+.remark-code-title {
+  @apply flex items-center rounded-t-xl bg-gray-200 px-4 py-2 font-mono text-sm font-medium text-gray-800 dark:bg-neutral-800 dark:text-gray-200;
+}
+
+.remark-code-title + div > pre {
+  @apply mt-0 rounded-t-none;
+}
+
+.code-highlight {
+  @apply float-left min-w-full;
+}
+
+.code-line {
+  @apply -mx-4 block border-l-4 border-transparent pr-4 pl-4;
+}
+
+.code-line.inserted {
+  @apply bg-[#033a16];
+  color: #7ee787;
+}
+
+.code-line.deleted {
+  @apply bg-[#490202];
+  color: #ffa198;
+}
+
+.highlight-line {
+  @apply -mx-4 border-l-4 border-[#1f6feb] bg-[#6e76811a];
+}
+
+.line-number::before {
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-[#6e7681];
+  content: attr(line);
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata,
+.token.punctuation.definition.comment,
+.token.string.comment {
+  color: #8b949e;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #c9d1d9;
+}
+
+.token.constant.character,
+.token.constant.other.placeholder {
+  color: #ff7b72;
+}
+
+.token.constant,
+.token.entity.name.constant,
+.token.variable.other.constant,
+.token.variable.language,
+.token.entity {
+  color: #79c0ff;
+}
+
+.token.entity.name,
+.token.meta.export.default,
+.token.meta.definition.variable {
+  color: #ffa657;
+}
+
+.token.variable.parameter.function,
+.token.meta.jsx.children,
+.token.meta.block,
+.token.meta.tag.attributes,
+.token.meta.object.member,
+.token.meta.embedded.expression {
+  color: #e6edf3;
+}
+
+.token.entity.name.function,
+.token.function {
+  color: #d2a8ff;
+}
+
+.token.entity.name.tag,
+.token.support.class.component {
+  color: #7ee787;
+}
+
+.token.keyword,
+.token.storage,
+.token.storage.type {
+  color: #ff7b72;
+}
+
+.token.storage.modifier.package,
+.token.storage.modifier.import,
+.token.storage.type.java {
+  color: #e6edf3;
+}
+
+.token.string,
+.token.string.punctuation.section.embedded,
+.token.string.other.link,
+.token.constant.other.reference.link {
+  color: #a5d6ff;
+}
+
+.token.support,
+.token.meta.property-name {
+  color: #79c0ff;
+}
+
+.token.variable {
+  color: #ffa657;
+}
+
+.token.variable.other {
+  color: #e6edf3;
+}
+
+.token.invalid.broken,
+.token.invalid.deprecated,
+.token.invalid.illegal,
+.token.invalid.unimplemented,
+.token.message.error {
+  color: #ffa198;
+  font-style: italic;
+}
+
+.token.regexp,
+.token.string.regexp {
+  color: #a5d6ff;
+}
+
+.token.string.regexp.character-class,
+.token.string.regexp.constant.character.escape {
+  color: #7ee787;
+  font-weight: bold;
+}
+
+.token.markup.heading,
+.token.markup.heading .token.entity.name {
+  color: #79c0ff;
+  font-weight: bold;
+}
+
+.token.markup.quote {
+  color: #7ee787;
+}
+
+.token.markup.italic {
+  font-style: italic;
+  color: #e6edf3;
+}
+
+.token.markup.bold {
+  font-weight: bold;
+  color: #e6edf3;
+}
+
+.token.markup.underline {
+  text-decoration: underline;
+}
+
+.token.markup.strikethrough {
+  text-decoration: line-through;
+}
+
+.token.markup.inline.raw {
+  color: #79c0ff;
+}
+
+pre[class*='language-'] {
+  background-color: #0d1117 !important;
+  color: #e6edf3;
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto;
+}
+
+pre[class*='language-']::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre[class*='language-']::-webkit-scrollbar-thumb {
+  background-color: #30363d;
+  border-radius: 4px;
 }
