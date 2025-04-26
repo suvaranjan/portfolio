@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
@@ -17,14 +17,21 @@ import {
 
 export default function Navbar() {
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   const isDarkMode = theme === 'dark'
-  const themeAriaLabel = isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
 
   const navItems = [
     {
@@ -45,15 +52,15 @@ export default function Navbar() {
       showLabel: true,
       showArrow: false,
     },
-    {
-      href: '/contact',
-      icon: EnvelopeClosedIcon,
-      label: 'Contact',
-      isActive: pathname === '/contact',
-      isExternal: false,
-      showLabel: true,
-      showArrow: false,
-    },
+    // {
+    //   href: '#contact',
+    //   icon: EnvelopeClosedIcon,
+    //   label: 'Contact',
+    //   isActive: false,
+    //   isExternal: false,
+    //   showLabel: true,
+    //   showArrow: false,
+    // },
   ]
 
   return (
@@ -79,11 +86,7 @@ export default function Navbar() {
         ))}
 
         {/* Theme Toggle */}
-        <button
-          onClick={toggleTheme}
-          className="group relative transition-all duration-300"
-          aria-label={themeAriaLabel}
-        >
+        <button onClick={toggleTheme} className="group relative transition-all duration-300">
           <div className="relative h-4 w-4">
             <MoonIcon
               className={`absolute h-4 w-4 text-gray-500 transition-all duration-300 ease-in-out dark:text-gray-400 ${

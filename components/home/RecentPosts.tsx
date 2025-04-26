@@ -31,7 +31,7 @@ export default function RecentPosts({ posts }) {
       <div className="mt-8">
         <Link
           href="/blog"
-          className="group inline-flex items-center gap-1 text-sm font-medium text-gray-700"
+          className="group inline-flex items-center gap-1 text-sm font-medium text-gray-500"
         >
           Browse all blogs
           <ArrowRightIcon className="h-4 w-4 opacity-50 transition-transform duration-200 group-hover:translate-x-1 group-hover:opacity-100" />

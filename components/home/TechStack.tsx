@@ -5,27 +5,25 @@ import profile from '@/data/profile.json'
 
 const TechIcon = ({ tech }: { tech: { name: string; icon: string } }) => {
   return (
-    <div className="mx-0 flex items-center justify-center rounded-lg bg-white/10 p-2 backdrop-blur-sm transition-colors hover:bg-white/20 dark:bg-black/10 dark:hover:bg-black/20">
-      <Image
-        src={tech.icon}
-        alt={tech.name}
-        width={40}
-        height={40}
-        className="opacity-90 transition-opacity hover:opacity-100"
-      />
-    </div>
+    <Image
+      src={tech.icon}
+      alt={tech.name}
+      width={45}
+      height={45}
+      className="ml-2 opacity-90 transition-opacity hover:opacity-100"
+    />
   )
 }
 
 export default function TechStack() {
   return (
-    <section className="mt-10" id="tech-stack">
+    <section className="mt-10 mb-5" id="tech-stack">
       <div className="mb-5 flex items-center gap-3">
-        <div className="h-[0.7px] flex-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
-        <h2 className="px-2 text-xs font-semibold tracking-widest whitespace-nowrap text-gray-500 uppercase">
-          Tech stack
+        <div className="h-[0.7px] flex-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent dark:via-neutral-600" />
+        <h2 className="font-medium tracking-widest text-neutral-800 uppercase dark:text-neutral-200">
+          Tech Stack
         </h2>
-        <div className="h-[0.7px] flex-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent" />
+        <div className="h-[0.7px] flex-1 bg-gradient-to-r from-transparent via-gray-400 to-transparent dark:via-neutral-600" />
       </div>
 
       <div className="relative flex w-full items-center justify-center overflow-hidden">
@@ -35,9 +33,9 @@ export default function TechStack() {
           ))}
         </Marquee>
 
-        {/* Left and Right Fade */}
-        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r" />
-        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l" />
+        {/* Light mode only fade effect */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-white to-transparent dark:hidden" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-white to-transparent dark:hidden" />
       </div>
     </section>
   )

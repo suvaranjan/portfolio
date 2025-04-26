@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import Image from 'next/image'
 import profile from '@/data/profile.json' // <-- Correct import!
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -34,6 +35,13 @@ export default function About() {
             {para}
           </p>
         ))}
+
+        <p className="max-w-xl text-gray-600 dark:text-gray-300">
+          Currently Looking for work as developer.
+          <Link className="ml-2 text-sm font-semibold" href="#contact">
+            Hire me?
+          </Link>
+        </p>
       </div>
 
       {/* Avatar */}
