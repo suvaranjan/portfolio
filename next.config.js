@@ -81,8 +81,13 @@ module.exports = () => {
           protocol: 'https',
           hostname: 'github.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'skillicons.dev',
+        },
       ],
       unoptimized,
+      dangerouslyAllowSVG: true,
     },
     async headers() {
       return [

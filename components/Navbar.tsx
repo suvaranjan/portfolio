@@ -1,44 +1,23 @@
 /* eslint-disable prettier/prettier */
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
 
-import { HomeIcon, MoonIcon, SunIcon, ReaderIcon, ArrowTopRightIcon } from '@radix-ui/react-icons'
+import {
+  HomeIcon,
+  MoonIcon,
+  SunIcon,
+  ReaderIcon,
+  ArrowTopRightIcon,
+  EnvelopeClosedIcon,
+} from '@radix-ui/react-icons'
 
 export default function Navbar() {
   const pathname = usePathname()
-  const [time, setTime] = useState({
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-    ampm: 'AM',
-  })
-
   const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    const updateClock = () => {
-      const now = new Date()
-      let hours = now.getHours()
-      const minutes = String(now.getMinutes()).padStart(2, '0')
-      const seconds = String(now.getSeconds()).padStart(2, '0')
-      const ampm = hours >= 12 ? 'PM' : 'AM'
-      hours = hours % 12 || 12
-      setTime({
-        hours: String(hours).padStart(2, '0'),
-        minutes,
-        seconds,
-        ampm,
-      })
-    }
-
-    updateClock()
-    const interval = setInterval(updateClock, 1000)
-    return () => clearInterval(interval)
-  }, [])
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -66,6 +45,15 @@ export default function Navbar() {
       showLabel: true,
       showArrow: false,
     },
+    {
+      href: '/contact',
+      icon: EnvelopeClosedIcon,
+      label: 'Contact',
+      isActive: pathname === '/contact',
+      isExternal: false,
+      showLabel: true,
+      showArrow: false,
+    },
   ]
 
   return (
@@ -84,13 +72,7 @@ export default function Navbar() {
               }`}
             >
               <item.icon className="h-4 w-4" />
-              {item.showLabel && (
-                <span
-                // className="hidden sm:inline"
-                >
-                  {item.label}
-                </span>
-              )}
+              {item.showLabel && <span>{item.label}</span>}
             </Link>
             {item.showArrow && <ArrowTopRightIcon className="h-2.5 w-2.5 text-gray-500" />}
           </div>
@@ -115,12 +97,6 @@ export default function Navbar() {
             />
           </div>
         </button>
-
-        {/* Time */}
-        <div className="min-w-[110px] font-mono text-sm text-gray-500 tabular-nums">
-          {time.hours}:{time.minutes}:<span className="text-red-500">{time.seconds}</span>{' '}
-          {time.ampm}
-        </div>
       </div>
     </nav>
   )

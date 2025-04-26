@@ -1,0 +1,57 @@
+{
+  "about": {
+    "name": "Suvaranjan Pradhan",
+    "title": "Full stack Web Developer",
+    "avatar": "https://github.com/shadcn.png",
+    "description": [
+      "Passionate about creating fast, accessible, and user-centric digital experiences.I specialize in the MERN/Next.js stack and love crafting UI/UX with clean, scalable code.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam adipisci fuga laudantium non repellendus."
+    ]
+  },
+  "projects": [
+    {
+      "title": "oklch.fyi",
+      "description": "oklch() color generator.",
+      "slug": "snapui"
+    },
+    {
+      "title": "emj.is",
+      "description": "Text to emoji translator.",
+      "slug": "emjis"
+    }
+  ],
+  "skills": [
+    {
+      "name": "React",
+      "icon": "https://skillicons.dev/icons?i=react"
+    },
+    {
+      "name": "Next",
+      "icon": "https://skillicons.dev/icons?i=nextjs"
+    },
+    {
+      "name": "Express",
+      "icon": "https://skillicons.dev/icons?i=express"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "https://skillicons.dev/icons?i=ts"
+    },
+    {
+      "name": "Prisma",
+      "icon": "https://skillicons.dev/icons?i=prisma"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "https://skillicons.dev/icons?i=mongodb"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "https://skillicons.dev/icons?i=postgresql"
+    },
+    {
+      "name": "VSCode",
+      "icon": "https://skillicons.dev/icons?i=vscode"
+    }
+  ]
+}

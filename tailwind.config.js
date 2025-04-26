@@ -1,9 +1,24 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 // @ts-check
 /** @type {import("tailwindcss").Config } */
 module.exports = {
   theme: {
     extend: {
+      // Keyframes and animations should be here, not inside typography
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-100% - var(--gap)))' },
+        },
+        'marquee-vertical': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(calc(-100% - var(--gap)))' },
+        },
+      },
+      animation: {
+        marquee: 'marquee var(--duration) linear infinite',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+      },
+      // Typography plugin configuration remains separate
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
