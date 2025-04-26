@@ -6242,6 +6242,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^12.9.2":
+  version: 12.9.2
+  resolution: "framer-motion@npm:12.9.2"
+  dependencies:
+    motion-dom: ^12.9.1
+    motion-utils: ^12.8.3
+    tslib: ^2.4.0
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: d727674f64a4b0735aac368107b76d54b3bc5e1becce4c80eb7a1be29b9bc214396ae67564b7c18a46111efa96bd54d240d7923310e741b51abd3e644e0da968
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^3.0.0":
   version: 3.0.3
   resolution: "fs-minipass@npm:3.0.3"
@@ -9028,6 +9050,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"motion-dom@npm:^12.9.1":
+  version: 12.9.1
+  resolution: "motion-dom@npm:12.9.1"
+  dependencies:
+    motion-utils: ^12.8.3
+  checksum: 080a17af7195a04ec52701aab2a8b4b0ca475b7425f4c1ee091536cf699d6e7173cbfe3b1ddc8fb8738d284e3b402b2205fd8f2b7a385c255780c56c359979dd
+  languageName: node
+  linkType: hard
+
+"motion-utils@npm:^12.8.3":
+  version: 12.8.3
+  resolution: "motion-utils@npm:12.8.3"
+  checksum: 7eec8df83bcbeac3b0dcbb33af41c0dc6b31e0f96a2fdba5685c087bac5257ce674212d65263d325c7e7b4ddcea3706b1225c51e97c97cfc4ef8d42190d0223d
+  languageName: node
+  linkType: hard
+
 "mrmime@npm:^2.0.0":
   version: 2.0.0
   resolution: "mrmime@npm:2.0.0"
@@ -11521,6 +11559,7 @@ __metadata:
     eslint-config-next: 15.1.4
     eslint-config-prettier: ^9.1.0
     eslint-plugin-prettier: ^5.2.0
+    framer-motion: ^12.9.2
     github-slugger: ^2.0.0
     globals: ^15.12.0
     gray-matter: ^4.0.2

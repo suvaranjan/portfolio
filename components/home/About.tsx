@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import Image from 'next/image'
-import profile from '@/data/profile.json' // <-- Correct import!
+import profile from '@/data/profile.json'
 import Link from 'next/link'
 
 export default function About() {
