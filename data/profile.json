@@ -2,7 +2,7 @@
   "about": {
     "name": "Suvaranjan Pradhan",
     "title": "Full stack Web Developer",
-    "avatar": "https://github.com/shadcn.png",
+    "avatar": "/static/images/profile.jpg",
     "description": [
       "Passionate about creating fast, accessible, and user-centric digital experiences.I specialize in the MERN/Next.js stack and love crafting UI/UX with clean, scalable code.",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam adipisci fuga laudantium non repellendus."

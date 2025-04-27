@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Suvaranjan',
   author: 'Suvaranjan Pradhan',
   headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'I never let my ideas slip away, I just write them.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

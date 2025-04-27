@@ -62,7 +62,7 @@ export default function ListLayout({ posts, title, pagination }: ListLayoutProps
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <div className="space-y-1 pt-6 pb-8">
           <div className="flex items-center justify-between gap-4">
             <h1 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
               {title}
